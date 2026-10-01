@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Joy Hsu</title>
+    <meta
+      name="description"
+      content="Academic website skeleton for Joy Hsu."
+    />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LXJM5N3DRJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-LXJM5N3DRJ");
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="wordmark" href="#home">Joy Hsu</a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#home">Home</a>
+          <a href="#publications">Publications</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="section home-grid">
+        <img class="portrait" src="assets/img/profile.jpg" alt="Joy Hsu" />
+
+        <div class="intro">
+          <h1>Joy Hsu</h1>
+          <p>
+            I am a Member of Technical Staff at
+            <a href="https://openai.com/" target="_blank" rel="noopener noreferrer">OpenAI</a>
+            and an incoming
+            Assistant Professor in the Department of Computing at
+            <a href="https://www.imperial.ac.uk/computing/" target="_blank" rel="noopener noreferrer">Imperial College</a>.
+            Previously, I completed my PhD in Computer Science at
+            <a href="https://www.cs.stanford.edu/" target="_blank" rel="noopener noreferrer">Stanford University</a>
+            as a
+            <a href="https://knight-hennessy.stanford.edu/" target="_blank" rel="noopener noreferrer">Knight-Hennessy Scholar</a>
+            and
+            <a href="https://www.nsfgrfp.org/" target="_blank" rel="noopener noreferrer">NSF Fellow</a>,
+            advised by
+            <a href="https://jiajunwu.com/" target="_blank" rel="noopener noreferrer">Jiajun Wu</a>.
+            I also received my BS and MS from Stanford University.
+          </p>
+          <p>
+            You can reach me at
+            <a href="mailto:joy.cj.hsu@gmail.com">joy.cj.hsu@gmail.com</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="section text-section" aria-labelledby="research-heading">
+        <h2 id="research-heading">Research</h2>
+        <p>
+          My research focuses on
+          <span class="highlight">multimodal reasoning models</span> &amp;
+          <span class="highlight">agentic systems</span>:
+          machines that can perceive, interpret, and interact safely with their
+          environments. I am particularly interested in building models that
+          generalize across diverse domains and long-horizon tasks, and do so
+          robustly and reliably such that they can be deployed in the real world.
+        </p>
+      </section>
+
+      <section id="publications" class="section publications" aria-labelledby="publications-heading">
+        <div class="section-heading">
+          <h2 id="publications-heading">Publications</h2>
+          <!-- Remove `hidden` to restore the publication view controls. -->
+          <p class="publication-filters" hidden>
+            <button class="filter" type="button" data-mode="selected">
+              show selected
+            </button>
+            <span>/</span>
+            <button class="filter is-active" type="button" data-mode="all">
+              show all
+            </button>
+            <span>/</span>
+            <button class="filter" type="button" data-mode="topic">
+              by topic
+            </button>
+          </p>
+        </div>
+
+        <div class="topic-controls" aria-label="Publication topics">
+          <button class="topic is-active" type="button" data-topic="hybrid">Hybrid Models</button>
+          <button class="topic" type="button" data-topic="perception">Multimodal Perception</button>
+          <button class="topic" type="button" data-topic="generalizable">Generalizable Visual Reasoning</button>
+          <button class="topic" type="button" data-topic="embodied">Embodied AI</button>
+        </div>
+
+        <div class="pub-list" aria-live="polite">
+          <article class="pub" data-selected="false" data-year="2026" data-topic="generalizable">
+            <img class="thumb pub-image" src="assets/img/publications/2026_phd_thesis.png" alt="PhD thesis thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">Toward Generalizable and Intelligent Visual Reasoning Systems</span></h3>
+              <p class="authors"><strong>Joy Hsu</strong></p>
+              <p class="venue"><strong>PhD Thesis</strong> / <a href="https://stacks.stanford.edu/file/yq194dx1901/JoyHsu_Dissertation-augmented.pdf" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="false" data-year="2026" data-topic="hybrid">
+            <img class="thumb pub-image" src="assets/img/publications/2026_apivot.png" alt="APIVOT paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">APIVOT: Adaptive Planning with Interleaved Vision-Language Thoughts</span></h3>
+              <p class="authors">Emily Jin, <strong>Joy Hsu</strong>, Yiqing Xu, Weiyu Liu&dagger;, Nick Haber&dagger;, and Jiajun Wu&dagger;</p>
+              <p class="venue"><strong>NeurIPS 2026</strong> / <a href="https://arxiv.org/abs/2607.08024" target="_blank" rel="noopener noreferrer">Paper</a> / <a href="https://emilyzjin.github.io/projects/apivot.html" target="_blank" rel="noopener noreferrer">Project Page</a></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="false" data-year="2026" data-topic="perception">
+            <img class="thumb pub-image" src="assets/img/publications/2026_saw.png" alt="Learning Situated Awareness paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">Learning Situated Awareness in the Real World</span></h3>
+              <p class="authors">Chuhan Li, Ruilin Han*, <strong>Joy Hsu*</strong>, Yongyuan Liang*, Rajiv Dhawan, Jiajun Wu, Ming-Hsuan Yang, and Xin Eric Wang</p>
+              <p class="venue"><strong>ICML 2026</strong> / <a href="https://arxiv.org/abs/2602.16682" target="_blank" rel="noopener noreferrer">Paper</a> / <a href="https://sawbench.github.io/" target="_blank" rel="noopener noreferrer">Project Page</a></p>
+              <p class="note">Spotlight Presentation</p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="false" data-year="2026" data-topic="perception">
+            <img class="thumb pub-image" src="assets/img/publications/2026_tbm.png" alt="Tool Bottleneck paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">A Tool Bottleneck Framework for Clinically-Informed and Interpretable Medical Image Understanding</span></h3>
+              <p class="authors">Christina Liu*, Alan Wang*, <strong>Joy Hsu</strong>, Jiajun Wu, and Ehsan Adeli</p>
+              <p class="venue"><strong>MIDL 2026</strong> / <a href="https://arxiv.org/abs/2512.21414" target="_blank" rel="noopener noreferrer">Paper</a> / <a href="https://christinaliu2020.github.io/tbm/" target="_blank" rel="noopener noreferrer">Project Page</a></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="false" data-year="2026" data-topic="perception">
+            <img class="thumb pub-image" src="assets/img/publications/2026_neurona.png" alt="Neuro-Symbolic Decoding of Neural Activity paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">Neuro-Symbolic Decoding of Neural Activity</span></h3>
+              <p class="authors">Yanchen Wang*, <strong>Joy Hsu*</strong>, Ehsan Adeli&dagger;, and Jiajun Wu&dagger;</p>
+              <p class="venue"><strong>ICLR 2026</strong> / <a href="https://arxiv.org/abs/2603.03343" target="_blank" rel="noopener noreferrer">Paper</a> / <a href="https://ppwangyc.github.io/projects/neurona/" target="_blank" rel="noopener noreferrer">Project Page</a></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="true" data-year="2026" data-topic="hybrid">
+            <img class="thumb pub-image" src="assets/img/publications/2026_hwr.png" alt="Hybrid world representations paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">Discovering Hybrid World Representations with Co-Evolving Foundation Models</span></h3>
+              <p class="authors">Jiajun Wu, Yunzhi Zhang, Hong-Xing Yu, <strong>Joy Hsu</strong>, and Jiayuan Mao</p>
+              <p class="venue"><strong>AAAI 2026</strong> / <a href="https://jiajunwu.com/papers/hybridworldrep_aaaieta.pdf" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="false" data-year="2025" data-topic="hybrid">
+            <img class="thumb pub-image" src="assets/img/publications/2025_fs.png" alt="Factored real-world scene generation paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">From Programs to Poses: Factored Real-World Scene Generation via Learned Program Libraries</span></h3>
+              <p class="authors"><strong>Joy Hsu</strong>, Emily Jin, Jiajun Wu, and Niloy J. Mitra</p>
+              <p class="venue"><strong>NeurIPS 2025</strong> / <a href="https://arxiv.org/abs/2510.10292" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="true" data-year="2025" data-topic="generalizable">
+            <img class="thumb pub-image" src="assets/img/publications/2025_maze.png" alt="Maze abstractions paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">What Makes a Maze Look Like a Maze?</span></h3>
+              <p class="authors"><strong>Joy Hsu</strong>, Jiayuan Mao, Joshua B. Tenenbaum, Noah D. Goodman, and Jiajun Wu</p>
+              <p class="venue"><strong>ICLR 2025</strong> / <a href="https://arxiv.org/abs/2409.08202" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="false" data-year="2025" data-topic="generalizable">
+            <img class="thumb pub-image" src="assets/img/publications/2025_phier.png" alt="Predicate Hierarchies paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">Predicate Hierarchies Improve Few-Shot State Classification</span></h3>
+              <p class="authors">Emily Jin*, <strong>Joy Hsu*</strong>, and Jiajun Wu</p>
+              <p class="venue"><strong>ICLR 2025</strong> / <a href="https://arxiv.org/abs/2502.12481" target="_blank" rel="noopener noreferrer">Paper</a> / <a href="https://emilyzjin.github.io/projects/phier.html" target="_blank" rel="noopener noreferrer">Project Page</a></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="false" data-year="2025" data-topic="hybrid">
+            <img class="thumb pub-image" src="assets/img/publications/2025_vdlm.png" alt="VDLM paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">Visually Descriptive Language Model for Vector Graphics Reasoning</span></h3>
+              <p class="authors">Zhenhailong Wang, <strong>Joy Hsu</strong>, Xingyao Wang, Kuan-Hao Huang, Manling Li, Jiajun Wu, and Heng Ji</p>
+              <p class="venue"><strong>TMLR</strong> / <a href="https://arxiv.org/abs/2404.06479" target="_blank" rel="noopener noreferrer">Paper</a> / <a href="https://mikewangwzhl.github.io/VDLM/" target="_blank" rel="noopener noreferrer">Project Page</a></p>
+              <p class="note"><span class="note-context">CVPR Workshop On Multimodal Algorithmic Reasoning</span> <span>Spotlight Presentation</span></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="false" data-year="2024" data-topic="hybrid">
+            <img class="thumb pub-image" src="assets/img/publications/2024_larc.png" alt="LARC paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">Naturally Supervised 3D Visual Grounding with Language-Regularized Concept Learners</span></h3>
+              <p class="authors">Chun Feng*, <strong>Joy Hsu*</strong>, Weiyu Liu, and Jiajun Wu</p>
+              <p class="venue"><strong>CVPR 2024</strong> / <a href="https://arxiv.org/abs/2404.19696" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="false" data-year="2024" data-topic="embodied">
+            <img class="thumb pub-image" src="assets/img/publications/2024_parl.png" alt="Learning Planning Abstractions from Language paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">Learning Planning Abstractions from Language</span></h3>
+              <p class="authors">Weiyu Liu*, Geng Chen*, <strong>Joy Hsu</strong>, Jiayuan Mao&dagger;, and Jiajun Wu&dagger;</p>
+              <p class="venue"><strong>ICLR 2024</strong> / <a href="https://arxiv.org/abs/2405.03864" target="_blank" rel="noopener noreferrer">Paper</a> / <a href="https://parl2024.github.io/" target="_blank" rel="noopener noreferrer">Project Page</a></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="true" data-year="2023" data-topic="hybrid">
+            <img class="thumb pub-image" src="assets/img/publications/2023_left.png" alt="What's Left paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">What&rsquo;s Left? Concept Grounding with Logic-Enhanced Foundation Models</span></h3>
+              <p class="authors"><strong>Joy Hsu*</strong>, Jiayuan Mao*, Joshua B. Tenenbaum, and Jiajun Wu</p>
+              <p class="venue"><strong>NeurIPS 2023</strong> / <a href="https://arxiv.org/abs/2310.16035" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="false" data-year="2023" data-topic="generalizable">
+            <img class="thumb pub-image" src="assets/img/publications/2023_scratchpad.png" alt="Visual Scratchpads paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">Can Visual Scratchpads With Diagrammatic Abstractions Augment LLM Reasoning?</span></h3>
+              <p class="authors"><strong>Joy Hsu</strong>, Gabriel Poesia, Jiajun Wu, and Noah D. Goodman</p>
+              <p class="venue"><strong>PMLR</strong> / <a href="https://proceedings.mlr.press/v239/hsu23a/hsu23a.pdf" target="_blank" rel="noopener noreferrer">Paper</a></p>
+              <p class="note"><span class="note-context">NeurIPS ICBINB Workshop</span> <span>Best Poster Award</span></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="false" data-year="2023" data-topic="embodied">
+            <img class="thumb pub-image" src="assets/img/publications/2023_cpm.png" alt="Composable Part-Based Manipulation paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">Composable Part-Based Manipulation</span></h3>
+              <p class="authors">Weiyu Liu, Jiayuan Mao, <strong>Joy Hsu</strong>, Tucker Hermans, Animesh Garg, and Jiajun Wu</p>
+              <p class="venue"><strong>CoRL 2023</strong> / <a href="https://arxiv.org/abs/2405.05876" target="_blank" rel="noopener noreferrer">Paper</a> / <a href="https://cpmcorl2023.github.io/" target="_blank" rel="noopener noreferrer">Project Page</a></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="true" data-year="2023" data-topic="hybrid">
+            <img class="thumb pub-image" src="assets/img/publications/2023_nspose.png" alt="Motion Question Answering paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">Motion Question Answering via Modular Motion Programs</span></h3>
+              <p class="authors">Mark Endo*, <strong>Joy Hsu*</strong>, Jiaman Li, and Jiajun Wu</p>
+              <p class="venue"><strong>ICML 2023</strong> / <a href="https://arxiv.org/abs/2305.08953" target="_blank" rel="noopener noreferrer">Paper</a> / <a href="https://web.stanford.edu/~markendo/projects/human_motion_qa" target="_blank" rel="noopener noreferrer">Project Page</a></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="true" data-year="2023" data-topic="hybrid">
+            <img class="thumb pub-image" src="assets/img/publications/2023_ns3d.png" alt="NS3D paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">NS3D: Neuro-Symbolic Grounding of 3D Objects and Relations</span></h3>
+              <p class="authors"><strong>Joy Hsu</strong>, Jiayuan Mao, and Jiajun Wu</p>
+              <p class="venue"><strong>CVPR 2023</strong> / <a href="https://arxiv.org/abs/2303.13483" target="_blank" rel="noopener noreferrer">Paper</a></p>
+              <p class="note"><span class="note-context">CVPR Workshop On Compositional 3D Vision</span> <span>Oral Presentation</span></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="false" data-year="2023" data-topic="embodied">
+            <img class="thumb pub-image" src="assets/img/publications/2023_progport.png" alt="ProgramPort paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">Programmatically Grounded, Compositionally Generalizable Robotic Manipulation</span></h3>
+              <p class="authors">Renhao Wang*, Jiayuan Mao*, <strong>Joy Hsu</strong>, Hang Zhao, Jiajun Wu, and Yang Gao</p>
+              <p class="venue"><strong>ICLR 2023</strong> / <a href="https://arxiv.org/abs/2304.13826" target="_blank" rel="noopener noreferrer">Paper</a> / <a href="https://progport.github.io/" target="_blank" rel="noopener noreferrer">Project Page</a></p>
+              <p class="note">Spotlight Presentation</p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="false" data-year="2022" data-topic="generalizable">
+            <img class="thumb pub-image" src="assets/img/publications/2022_disco.png" alt="DisCo paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">DisCo: Improving Compositional Generalization in Visual Reasoning through Distribution Coverage</span></h3>
+              <p class="authors"><strong>Joy Hsu</strong>, Jiayuan Mao, and Jiajun Wu</p>
+              <p class="venue"><strong>TMLR</strong> / <a href="https://openreview.net/pdf?id=EgHnKOLaKW" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="false" data-year="2022" data-topic="generalizable">
+            <img class="thumb pub-image" src="assets/img/publications/2022_geoclidean.png" alt="Geoclidean paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">Geoclidean: Few-Shot Generalization in Euclidean Geometry</span></h3>
+              <p class="authors"><strong>Joy Hsu</strong>, Jiajun Wu, and Noah D. Goodman</p>
+              <p class="venue"><strong>NeurIPS 2022</strong> / <a href="https://arxiv.org/abs/2211.16663" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="false" data-year="2021" data-topic="perception">
+            <img class="thumb pub-image" src="assets/img/publications/2021_hyperbolic.png" alt="Hyperbolic representations paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">Capturing Implicit Hierarchical Structure in 3D Biomedical Images with Self-Supervised Hyperbolic Representations</span></h3>
+              <p class="authors"><strong>Joy Hsu*</strong>, Jeff Gu*, Gong-Her Wu, Wah Chiu, and Serena Yeung</p>
+              <p class="venue"><strong>NeurIPS 2021</strong> / <a href="https://arxiv.org/abs/2012.01644" target="_blank" rel="noopener noreferrer">Paper</a></p>
+              <p class="note"><span class="note-context">NeurIPS Differential Geometry Workshop</span> <span>Contributed Talk</span></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="false" data-year="2021" data-topic="perception">
+            <img class="thumb pub-image" src="assets/img/publications/2021_darcnn.png" alt="DARCNN paper thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">DARCNN: Domain Adaptive Region-based Convolutional Neural Network for Unsupervised Instance Segmentation in Biomedical Images</span></h3>
+              <p class="authors"><strong>Joy Hsu</strong>, Wah Chiu, and Serena Yeung</p>
+              <p class="venue"><strong>CVPR 2021</strong> / <a href="https://arxiv.org/abs/2104.01325" target="_blank" rel="noopener noreferrer">Paper</a></p>
+            </div>
+          </article>
+
+          <article class="pub" data-selected="false" data-year="2021" data-topic="thesis">
+            <img class="thumb pub-image" src="assets/img/publications/2021_thesis.png" alt="Stanford CS Honors Thesis thumbnail" />
+            <div class="pub-body">
+              <h3><span class="pub-title">Unsupervised Learning for Discovery in 2D &amp; 3D Scenes: Towards Unbiased Understanding of Biomedical Images</span></h3>
+              <p class="authors"><strong>Joy Hsu</strong></p>
+              <p class="venue"><strong>Undergraduate Honors Thesis</strong> / <a href="https://purl.stanford.edu/nv775dt3762" target="_blank" rel="noopener noreferrer">Paper</a></p>
+              <p class="note">Stanford Ben Wegbreit Prize for Best Thesis</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Last updated 2026.</p>
+    </footer>
+
+    <script src="script.js?v=20260517"></script>
+  </body>
+</html>
