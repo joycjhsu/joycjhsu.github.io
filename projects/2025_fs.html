@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FactoredScenes</title>
+    <meta name="description" content="From Programs to Poses: Factored Real-World Scene Generation via Learned Program Libraries." />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
+    <main class="project-main">
+      <section class="section project-hero">
+        <h1>From Programs to Poses: Factored Real-World Scene Generation via Learned Program Libraries</h1>
+        <p class="project-venue">NeurIPS 2025</p>
+        <p class="project-authors">
+          <a href="https://joycjhsu.github.io/" target="_blank" rel="noopener noreferrer">Joy Hsu</a>,
+          <a href="https://emilyzjin.github.io/" target="_blank" rel="noopener noreferrer">Emily Jin</a>,
+          <a href="https://jiajunwu.com/" target="_blank" rel="noopener noreferrer">Jiajun Wu</a>, and
+          <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/index.html" target="_blank" rel="noopener noreferrer">Niloy J. Mitra</a>
+        </p>
+        <div class="project-links" aria-label="Project resources">
+          <a href="https://arxiv.org/abs/2510.10292" target="_blank" rel="noopener noreferrer">arXiv</a>
+          <a href="https://github.com/joyhsu0504/factored_scenes" target="_blank" rel="noopener noreferrer">code</a>
+        </div>
+      </section>
+
+      <div class="project-lead-band">
+        <img class="project-media project-lead-media" src="../assets/img/2025_fs/systems.png" alt="Overview of the FactoredScenes framework" />
+      </div>
+
+      <section class="section project-section" aria-labelledby="abstract-heading">
+        <div class="project-copy">
+          <h2 id="abstract-heading">Abstract</h2>
+          <p>Real-world scenes, such as those in ScanNet, are difficult to capture, with highly limited data available. Generating realistic scenes with varied object poses remains an open and challenging task. In this work, we propose FactoredScenes, a framework that synthesizes realistic 3D scenes by leveraging the underlying structure of rooms while learning the variation of object poses from lived-in scenes. We introduce a factored representation that decomposes scenes into hierarchically organized concepts of room programs and object poses. To encode structure, FactoredScenes learns a library of functions capturing reusable layout patterns from which scenes are drawn, then uses large language models to generate high-level programs, regularized by the learned library. To represent scene variations, FactoredScenes learns a program-conditioned model to hierarchically predict object poses, and retrieves and places 3D objects in a scene. We show that FactoredScenes generates realistic, real-world rooms that are difficult to distinguish from real ScanNet scenes.</p>
+        </div>
+      </section>
+
+      <section class="section project-section project-section--paper" aria-labelledby="factored-heading">
+        <div class="project-copy">
+          <h2 id="factored-heading">FactoredScenes</h2>
+          <p>How can we learn to generate realistic scenes from limited data? Our key insight is that, despite inherent noisiness, indoor scenes retain significant underlying structure based on how rooms were intentionally designed, following social norms and preferences. Chairs are grouped around tables, and coffee tables are positioned by couches. We propose to leverage this (hidden) structure by first generating programmatic layouts that align with the foundational design of rooms, then modeling the realistic variation of lived-in scenes through a pose prediction model for orienting objects in the room. Our goal is to synthesize ScanNet-like data with diverse room layouts and object poses.</p>
+          <p>To this end, we introduce FactoredScenes, a framework that uses a <em>factored</em> representation to represent a scene. We decompose complex scene generation into five steps:</p>
+          <p class="project-inline-list">(i) learn a library of programs that capture room structures,<br />
+            (ii) generate a scene program using LLMs and the learned library,<br />
+            (iii) execute the program to retrieve axis-aligned layouts,<br />
+            (iv) predict object poses with a program-conditioned model, and<br />
+            (v) retrieve object instances based on program structure and predicted dimensions.</p>
+          <p>Notably, such decomposition of a room into hierarchical concepts eliminates the need to directly generate a room sampled from the full scene distribution, learned solely from ScanNet data. Instead, this approach enables FactoredScenes to leverage different data sources and methods to model different components of scenes' structure—effectively bootstrapping learning of the full scene distribution despite limited real-world data. Importantly, this modular design is made possible due to the appropriate levels of abstraction that enable interface between each component. Semantic knowledge from LLMs is distilled into programs, regularized by learned libraries, which operate on text-parameterized objects, with numeric values predicted by neural networks.</p>
+        </div>
+      </section>
+
+      <section class="section project-section" aria-labelledby="programs-heading">
+        <div class="project-copy">
+          <h2 id="programs-heading">From programs...</h2>
+          <p>Our framework first learns a space of programs that can generate room layouts from 3D-Front, a large-scale dataset of synthetic indoor scenes that are professionally designed. We use this dataset to <em>learn a library of reusable programs</em> that captures room structure patterns. FactoredScenes then leverages the generalization capabilities of large language models to create diverse new layouts, guided by our learned library. We demonstrate that this library learning step is essential in capturing structural relationships between objects in rooms, as opposed to relying solely on an inference-based library that has never seen example scenes.</p>
+        </div>
+        <figure class="project-figure project-figure--narrow">
+          <img class="project-media" src="../assets/img/2025_fs/programs.png" alt="FactoredScenes learned program library" loading="lazy" />
+        </figure>
+      </section>
+
+      <section class="section project-section project-section--paper" aria-labelledby="poses-heading">
+        <div class="project-copy">
+          <h2 id="poses-heading">... to poses</h2>
+          <p>Given the program and generated layout, FactoredScenes learns to predict object poses, using a much smaller ScanNet dataset. Here, the layout program serves as a form of regularization, enabling effective learning from (very) limited real-world data. FactoredScenes's object pose model orients bounding boxes hierarchically given this program. It first predicts poses of primary objects (e.g., a table), and then predicts that of dependent objects (e.g., chairs grouped around the table) based on primary pose predictions. Finally, FactoredScenes retrieves object instances based on their predicted dimensions, completing the full 3D scene.</p>
+        </div>
+        <figure class="project-figure">
+          <img class="project-media" src="../assets/img/2025_fs/poses.png" alt="FactoredScenes object pose prediction" loading="lazy" />
+        </figure>
+      </section>
+
+      <section class="section project-section" aria-labelledby="results-heading">
+        <div class="project-copy">
+          <h2 id="results-heading">Results</h2>
+          <p>FactoredScenes demonstrates significant improvements over prior work in generating realistic ScanNet oriented layouts by FID and KID metrics. We also quantitatively evaluate our learned library's ability to compress room structure compared to an inference-only library, and see a 644.1% relative improvement in function use. In addition, we evaluate our object pose model's performance, which shows a 11.4% relative improvement in prediction of dependent object poses. Finally, we conduct a human study comparing FactoredScenes's rooms to real ScanNet rooms, and demonstrate that our generated 3D scenes are difficult for humans to distinguish from real scenes. We believe that FactoredScenes is a step toward realistic, real-world scene generation from programs to poses.</p>
+        </div>
+        <figure class="project-figure project-figure--results">
+          <img class="project-media" src="../assets/img/2025_fs/results.png" alt="Quantitative FactoredScenes results" loading="lazy" />
+        </figure>
+        <div class="project-copy project-copy--after-media">
+          <p>Below, we render diverse examples of FactoredScenes's generated 3D scenes with annotated ScanNet (top row) and ShapeNet (bottom row) objects. Note that ScanNet objects are often partial, hence we include a scaled and interpolated ScanNet background for visualization.</p>
+        </div>
+        <figure class="project-figure">
+          <img class="project-media" src="../assets/img/2025_fs/viz.png" alt="Generated FactoredScenes examples" loading="lazy" />
+        </figure>
+      </section>
+
+      <section class="section project-section project-section--paper" aria-labelledby="code-heading">
+        <div class="project-copy">
+          <h2 id="code-heading">Code release</h2>
+          <p>We release code for FactoredScenes <a href="https://github.com/joyhsu0504/factored_scenes" target="_blank" rel="noopener noreferrer">here</a>. Thanks!</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

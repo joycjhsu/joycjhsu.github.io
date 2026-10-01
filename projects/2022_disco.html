@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DisCo</title>
+    <meta name="description" content="DisCo: Improving Compositional Generalization in Visual Reasoning through Distribution Coverage." />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
+    <main class="project-main">
+      <section class="section project-hero">
+        <h1>DisCo: Improving Compositional Generalization in Visual Reasoning through Distribution Coverage</h1>
+        <p class="project-venue">TMLR</p>
+        <p class="project-authors">
+          <a href="https://joycjhsu.github.io/" target="_blank" rel="noopener noreferrer">Joy Hsu</a>,
+          <a href="https://jiayuanm.com/" target="_blank" rel="noopener noreferrer">Jiayuan Mao</a>, and
+          <a href="https://jiajunwu.com/" target="_blank" rel="noopener noreferrer">Jiajun Wu</a>
+        </p>
+        <div class="project-links" aria-label="Project resources">
+          <a href="https://openreview.net/pdf?id=EgHnKOLaKW" target="_blank" rel="noopener noreferrer">paper</a>
+          <a href="https://github.com/joyhsu0504/disco" target="_blank" rel="noopener noreferrer">code</a>
+        </div>
+      </section>
+      <div class="project-lead-band">
+        <img class="project-media project-lead-media" src="../assets/img/2022_disco/systems.png" alt="Overview of the DisCo framework" />
+      </div>
+      <section class="section project-section" aria-labelledby="abstract-heading">
+        <div class="project-copy">
+          <h2 id="abstract-heading">Abstract</h2>
+          <p>We present DisCo, a learning paradigm for improving compositional generalization of visual reasoning models by leveraging unlabeled, out-of-distribution images from the test distribution. DisCo has two components. The first is an iterative pseudo-labeling framework with an entropy measure, which effectively labels images of novel attribute compositions paired with randomly sampled questions. The second is a distribution coverage metric, serving as a model selection strategy that approximates generalization capability to test examples drawn from a different attribute combination distribution to the train set, without the use of labeled data from the test distribution. Both components are built on strong empirical evidence of the correlation between the chosen metric and model generalization, and improve distribution coverage on unlabeled images. We apply DisCo to visual question answering, with three backbone networks (FiLM, TbD-net, and the Neuro-Symbolic Concept Learner), and demonstrate that it consistently enhances performance on a variety of compositional generalization tasks with varying levels of train data bias.</p>
+        </div>
+      </section>
+      <section class="section project-section project-section--paper" aria-labelledby="code-heading">
+        <div class="project-copy">
+          <h2 id="code-heading">Code release</h2>
+          <p>We release code for DisCo <a href="https://github.com/joyhsu0504/disco" target="_blank" rel="noopener noreferrer">here</a>. Thanks!</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

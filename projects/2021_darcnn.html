@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DARCNN</title>
+    <meta name="description" content="DARCNN: Domain Adaptive Region-based Convolutional Neural Network for Unsupervised Instance Segmentation in Biomedical Images." />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
+    <main class="project-main">
+      <section class="section project-hero">
+        <h1>DARCNN: Domain Adaptive Region-based Convolutional Neural Network for Unsupervised Instance Segmentation in Biomedical Images</h1>
+        <p class="project-venue">CVPR 2021</p>
+        <p class="project-authors">
+          <a href="https://joycjhsu.github.io/" target="_blank" rel="noopener noreferrer">Joy Hsu</a>,
+          <a href="https://www.wahchiulab.org/" target="_blank" rel="noopener noreferrer">Wah Chiu</a>, and
+          <a href="https://ai.stanford.edu/~syyeung/" target="_blank" rel="noopener noreferrer">Serena Yeung</a>
+        </p>
+        <div class="project-links" aria-label="Project resources">
+          <a href="https://arxiv.org/abs/2104.01325" target="_blank" rel="noopener noreferrer">paper</a>
+          <a href="https://github.com/joyhsu0504/darcnn" target="_blank" rel="noopener noreferrer">code</a>
+        </div>
+      </section>
+      <div class="project-lead-band">
+        <img class="project-media project-lead-media" src="../assets/img/2021_darcnn/systems.png" alt="Overview of the DARCNN framework" />
+      </div>
+      <section class="section project-section" aria-labelledby="abstract-heading">
+        <div class="project-copy">
+          <h2 id="abstract-heading">Abstract</h2>
+          <p>In the biomedical domain, there is an abundance of dense, complex data where objects of interest may be challenging to detect or constrained by limits of human knowledge. Labelled domain specific datasets for supervised tasks are often expensive to obtain, and furthermore discovery of novel distinct objects may be desirable for unbiased scientific discovery. Therefore, we propose leveraging the wealth of annotations in benchmark computer vision datasets to conduct unsupervised instance segmentation for diverse biomedical datasets. The key obstacle is thus overcoming the large domain shift from common to biomedical images. We propose a Domain Adaptive Region-based Convolutional Neural Network (DARCNN), that adapts knowledge of object definition from COCO, a large labelled vision dataset, to multiple biomedical datasets. We introduce a domain separation module, a self-supervised background representation consistency loss, and an augmented pseudo-labelling stage within DARCNN to effectively perform domain adaptation across such large domain shifts. We showcase DARCNN's performance for unsupervised instance segmentation on numerous biomedical datasets.</p>
+        </div>
+      </section>
+      <section class="section project-section project-section--paper" aria-labelledby="code-heading">
+        <div class="project-copy">
+          <h2 id="code-heading">Code release</h2>
+          <p>We release code for DARCNN <a href="https://github.com/joyhsu0504/darcnn" target="_blank" rel="noopener noreferrer">here</a>.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

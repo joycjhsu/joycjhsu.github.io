@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Capturing Implicit Hierarchical Structure</title>
+    <meta name="description" content="Capturing Implicit Hierarchical Structure in 3D Biomedical Images with Self-Supervised Hyperbolic Representations." />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
+    <main class="project-main">
+      <section class="section project-hero">
+        <h1>Capturing Implicit Hierarchical Structure in 3D Biomedical Images with Self-Supervised Hyperbolic Representations</h1>
+        <p class="project-venue">NeurIPS 2021</p>
+        <p class="project-authors">
+          <a href="https://joycjhsu.github.io/" target="_blank" rel="noopener noreferrer">Joy Hsu</a>*,
+          <a href="https://its-gucci.github.io/" target="_blank" rel="noopener noreferrer">Jeff Gu</a>*,
+          <a href="https://scholar.google.com/citations?user=wWS-F6sAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Gong-Her Wu</a>,
+          <a href="https://www.wahchiulab.org/" target="_blank" rel="noopener noreferrer">Wah Chiu</a>, and
+          <a href="https://ai.stanford.edu/~syyeung/" target="_blank" rel="noopener noreferrer">Serena Yeung</a>
+        </p>
+        <div class="project-links" aria-label="Project resources">
+          <a href="https://arxiv.org/abs/2012.01644" target="_blank" rel="noopener noreferrer">paper</a>
+          <a href="https://github.com/its-gucci/capturing-implicit-hierarchical-structure" target="_blank" rel="noopener noreferrer">code</a>
+        </div>
+      </section>
+      <div class="project-lead-band">
+        <img class="project-media project-lead-media project-lead-media--compact" src="../assets/img/2021_hyperbolic/systems.png" alt="Overview of the self-supervised hyperbolic representation method" />
+      </div>
+      <section class="section project-section" aria-labelledby="abstract-heading">
+        <div class="project-copy">
+          <h2 id="abstract-heading">Abstract</h2>
+          <p>We consider the task of representation learning for unsupervised segmentation of 3D voxel-grid biomedical images. We show that models that capture implicit hierarchical relationships between subvolumes are better suited for this task. To that end, we consider encoder-decoder architectures with a hyperbolic latent space, to explicitly capture hierarchical relationships present in subvolumes of the data. We propose utilizing a 3D hyperbolic variational autoencoder with a novel gyroplane convolutional layer to map from the embedding space back to 3D images. To capture these relationships, we introduce an essential self-supervised loss -- in addition to the standard VAE loss -- which infers approximate hierarchies and encourages implicitly related subvolumes to be mapped closer in the embedding space. We present experiments on both synthetic data and biomedical data to validate our hypothesis.</p>
+        </div>
+      </section>
+      <section class="section project-section project-section--paper" aria-labelledby="code-heading">
+        <div class="project-copy">
+          <h2 id="code-heading">Code release</h2>
+          <p>We release code <a href="https://github.com/its-gucci/capturing-implicit-hierarchical-structure" target="_blank" rel="noopener noreferrer">here</a>.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
